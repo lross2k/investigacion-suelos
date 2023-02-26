@@ -1,10 +1,17 @@
-# Script simple para ver filas y columnas con valores inválidos "NAN"
-#setwd("/home/lross/OneDrive/2023/IS/Asistencia CEQIATEC/verificando-datos/")
-#install.packages('openxlsx')
-#df <- df[-c(which(df=="NAN", arr.ind=TRUE)[,1])]
+# Simple script to remove rows with incomplete data
 #any(df=="NAN")
+
+#install.packages('readxl')
+library(readxl)
+#install.packages('openxlsx')
 library(openxlsx)
-df <- openxlsx::read.xlsx("Unificado_TBnov2020a29julio2021_Limpio.xlsx","Suelos")
-which(df=="NAN", arr.ind=TRUE) -> x
-df <- df[-c(x[,1])]
-openxlsx::write.xlsx(df, "prueba.xlsx", sheetName="Suelos")
+
+# Open Excel file to verify
+readxl::read_excel("Unificado_TBnov2020a29julio2021_Limpio.xlsx","Suelos") -> data
+# Remove any row with "NaN" values
+data[-c(which(data[,3:20]=="NaN", arr.ind=TRUE)[,1]),] -> data
+# Format date and time to follow the standard
+format(data$Hora, format="%H:%M") -> data$Hora
+format(data$Fecha, format="%d/%m/%Y") -> data$Fecha
+# Write changes to Excel file "test.xlsx"
+openxlsx::write.xlsx(data, "test.xlsx", sheetName="Suelos")

@@ -1,2 +1,6 @@
-﻿*.xlsx
+﻿# Excel files
+*.xlsx
+# RStudio temp files
 .Rhistory
+.RDataTmp
+
