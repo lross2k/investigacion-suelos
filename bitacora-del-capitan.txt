@@ -1,0 +1,44 @@
+Archivo TierraBlanca_Suelos.csv
+Presenta todos los datos desde el 4/11/2020 14:44 hasta el 14/12/2020 5:33
+No se ha verificado si existen NAN
+Se modificó para ser Limpio1
+
+Archivo Estación1_SuelosUnificado_01-07-2019 al 22-04-2021.csv
+Presenta todos los datos desde el 1/12/2019 8:54 hasta el 11/12/2019 12:42
+Luego salta a datos del 19/5/2020 16:54 y tiene varias rupturas en adelante
+Mucha pérdida de datos del 21/7/2020 9:16 hasta el 28/7/2020 10:40
+Se modificó para ser Unificado1
+
+Archivo Estación1_SuelosUnificado_01-07-2019 al 22-04-2021.csv
+Casi todos los mismos errores de Unificado1
+Presenta todos los datos desde 14/12/2020 16:37 hasta el 29/5/2021 15:04
+Se modificó para ser Limpio2
+
+Archivo Unificado_Estacion 1 Tierra Blanca_soilVUE_05-12-2019_25-04-2021.csv
+Presenta todos los datos desde 5/12/2019 20:50 hasta el 9/1/2020 10:24
+Presenta todos los datos desde 19/5/2020 16:54 hasta el 26/5/2020 10:10
+Presenta todos los datos desde 3/6/2020 12:18 hasta el 9/6/2020 10:04
+Presenta todos los datos desde 25/9/2020 11:42 hasta el 29/9/2020 9:52
+Presenta todos los datos desde 29/9/2020 11:46 hasta el 6/10/2020 8:58
+Presenta todos los datos desde 6/10/2020 10:44 hasta el 4/11/2020 12:08
+Presenta todos los datos desde 4/11/2020 14:46 hasta el 15/12/2020 00:00
+Presenta todos los datos desde 15/12/2020 12:10 hasta el 9/3/2021 14:00
+Presenta todos los datos desde 20/4/2021 10:20 hasta el 25/4/2021 21:58
+NO TIENE LOS MISMOS NOMBRES DE COLUMNAS
+Se modificó para ser Unificado2
+
+Archivo Estación1_SuelosUnificado_01-07-2019 al 17-08-2021.csv
+Este archivo presenta varios periodos muy completos, se elige como el archivo base
+
+Definicion de periodos para analizar individualmente
+PERIODO_1     01/12/2019 08:54    HASTA    11/12/2019 12:42
+PERIODO_2     19/05/2020 16:54    HASTA    26/05/2020 10:08
+PERIODO_3     03/06/2020 12:18    HASTA    09/06/2020 10:02
+PERIODO_4     27/07/2020 09:16    HASTA    21/08/2020 11:42
+PERIODO_5     21/08/2020 12:02    HASTA    29/09/2020 09:52
+PERIODO_6     29/09/2020 11:46    HASTA    06/10/2020 08:58
+PERIODO_7     06/10/2020 10:41    HASTA    26/10/2020 14:07
+PERIODO_8     04/11/2020 14:44    HASTA    13/12/2020 23:39
+PERIODO_9     14/12/2020 16:37    HASTA    19/08/2021 10:32
+
+Presenta todos los datos desde  hasta el 

@@ -1,5 +1,7 @@
 ﻿# Excel files
 *.xlsx
+# CSV files
+*.csv
 # RStudio temp files
 .Rhistory
 .RDataTmp
