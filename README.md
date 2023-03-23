@@ -3,6 +3,9 @@ Este repositorio tendrá los scripts usados para manejar los datos en la investi
 
 Ningún dato será almacenado ya que estos no son de mi autoría
 
+# Naming scheme
+Se usará la style guide de Google para R
+
 # Environment de programación
 - RStudio IDE en Debian Unstable
 - RStudio IDE en Windows 11
