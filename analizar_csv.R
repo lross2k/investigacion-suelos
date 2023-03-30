@@ -4,22 +4,43 @@ Data <- read.csv("Datos Base/PERIODO_2.csv", sep = ",")
 # Separar dataframe por dia
 Fechas <- split(Data, factor(Data$FECHA, levels = unique(Data$FECHA)))
 
-datos_final <- data.frame(cbind(Fechas[[1]][1,-2]))
-names(datos_final) <- colnames(Fechas[[1]][,-2])
+Promedio <- data.frame(cbind(Fechas[[1]][1,-2]))
+names(Promedio) <- colnames(Fechas[[1]][,-2])
+Maximo <- data.frame(cbind(Fechas[[1]][1,-2]))
+names(Maximo) <- colnames(Fechas[[1]][,-2])
+Minimo <- data.frame(cbind(Fechas[[1]][1,-2]))
+names(Minimo) <- colnames(Fechas[[1]][,-2])
 # Iterar sobre todas las fechas existentes en el dataframe
 for (Fecha in Fechas) {
-  col.mean <- apply(Fecha[,-c(1:2)], 2, mean, simplify = FALSE)
-  col.mean <- append(col.mean, Fecha[1,1], after = 0)
-  datos = data.frame(col.mean)
-  names(datos) <- colnames(Fechas[[1]][,-2])
-  datos_final <- rbind(datos_final, datos)
+  # Genera valores para agregar a las filas de cada respectivo valor
+  ColMean <- apply(Fecha[,-c(1:2)], 2, mean, simplify = FALSE)
+  ColMean <- append(ColMean, Fecha[1,1], after = 0)
+  ColMax <- apply(Fecha[,-c(1:2)], 2, max, simplify = FALSE)
+  ColMax <- append(ColMax, Fecha[1,1], after = 0)
+  ColMin <- apply(Fecha[,-c(1:2)], 2, min, simplify = FALSE)
+  ColMin <- append(ColMin, Fecha[1,1], after = 0)
+  # Genera un dataframe para cada respectivo valor y lo une al dataframe final
+  DatosTMP = data.frame(ColMean)
+  names(DatosTMP) <- colnames(Fechas[[1]][,-2])
+  Promedio <- rbind(Promedio, DatosTMP)
+  DatosTMP = data.frame(ColMax)
+  names(DatosTMP) <- colnames(Fechas[[1]][,-2])
+  Maximo <- rbind(Maximo, DatosTMP)
+  DatosTMP = data.frame(ColMin)
+  names(DatosTMP) <- colnames(Fechas[[1]][,-2])
+  Minimo <- rbind(Minimo, DatosTMP)
+  # Limpia environment de iteracion
+  rm(DatosTMP, ColMean, ColMax, ColMin)
 }
+# Limpia environment
+rm(Fecha, Fechas, Data)
 
-#names(datos) <- Fecha[1,-2]
-#col.max <- apply(Fechas$`20/04/2021`[,-c(1:2)], 2, max)
-#col.min <- apply(Fechas$`20/04/2021`[,-c(1:2)], 2, min)
+# Elimina valor dummy colocado al inicio
+Promedio <- Promedio[-c(1), ]
+Maximo <- Maximo[-c(1), ]
+Minimo <- Minimo[-c(1), ]
 
-# Generar data frame con los datos almacenados
-#df <- data.frame(Fecha[1,1], mean(Fecha$SoilTemp_2), max(Fecha$SoilTemp_2), min(Fecha$SoilTemp_2))
-#names(df) <- c("FECHA", "MEAN_SoilTemp_2", "MAX_SoilTemp_2", "MIN_SoilTemp_2")
-#print(df)
+# Genera CSV con los valores generados
+write.csv(Maximo, "Datos Base/PERIODO_2_MAX.csv", row.names = FALSE)
+write.csv(Minimo, "Datos Base/PERIODO_2_MIN.csv", row.names = FALSE)
+write.csv(Promedio, "Datos Base/PERIODO_2_AVG.csv", row.names = FALSE)
