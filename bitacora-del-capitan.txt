@@ -35,10 +35,26 @@ PERIODO_1     01/12/2019 08:54    HASTA    11/12/2019 12:42
 PERIODO_2     19/05/2020 16:54    HASTA    26/05/2020 10:08
 PERIODO_3     03/06/2020 12:18    HASTA    09/06/2020 10:02
 PERIODO_4     27/07/2020 09:16    HASTA    21/08/2020 11:42
+...
 PERIODO_5     21/08/2020 12:02    HASTA    29/09/2020 09:52
 PERIODO_6     29/09/2020 11:46    HASTA    06/10/2020 08:58
 PERIODO_7     06/10/2020 10:41    HASTA    26/10/2020 14:07
 PERIODO_8     04/11/2020 14:44    HASTA    13/12/2020 23:39
 PERIODO_9     14/12/2020 16:37    HASTA    19/08/2021 10:32
+
+Verificar en unificado de 
+Unificado Periodo 1
+13/12/2020 23:39 a 14/12/2020 16:37
+29/09/2020 09:52 a 29/09/2020 11:46
+06/10/2020 08:58 a 06/10/2020 10:41
+26/10/2020 14:07 a 04/11/2020 14:44
+
+clima temp humedad relativa
+
+lluvia
+
+de suelos suelos perm
+
+promedio, maximos y minimos, diario
 
 Presenta todos los datos desde  hasta el 

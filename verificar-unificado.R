@@ -1,29 +1,26 @@
-###############################
-## Conversions for Unificado ##
-###############################
-
 # Simple script to remove rows with incomplete data
 #any(df=="NAN")
 
-#install.packages('readxl')
-library(readxl)
-#install.packages('openxlsx')
-library(openxlsx)
+# Load data from CSV file
+read.csv("Datos Base/UNIFICADO_2.csv", sep = ",") -> Data
+# Format date and time for easier data management
+cbind(HORA = format(as.POSIXct(Data$TIMESTAMP, format = "%d/%m/%Y %H:%M"), format="%H:%M"), Data) -> Data
+cbind(FECHA = format(as.POSIXct(Data$TIMESTAMP, format = "%d/%m/%Y %H:%M"), format="%d/%m/%Y"), Data) -> Data
+Data <- Data[,-3]
 
-# Open Excel file to verify
-readxl::read_excel("Unificado_TBnov2020a29julio2021_Limpio.xlsx","Suelos") -> data
-# Format date and time to follow the standard
-format(data$Hora, format="%H:%M") -> data$Hora
-format(data$Fecha, format="%d/%m/%Y") -> data$Fecha
+Missing <- Data[which(Data=="NAN", arr.ind=TRUE)[,1],1:2]
+Missing$DATO = colnames(Data)[which(Data=="NAN", arr.ind=TRUE)[,2]]
+#write.csv(Missing, "Datos Base/FALTANTES_UNIFICADO_2.csv")
 
-missing <- data[which(data[,-(1:2)]=="NaN", arr.ind=TRUE)[,1],1:2]
-missing$Dato = colnames(data[,-(1:2)])[which(data[,-(1:2)]=="NaN", arr.ind=TRUE)[,2]]
-openxlsx::write.xlsx(data, "faltantes_Unificado_TBnov2020a29julio2021_Limpio.xlsx")
+#install.packages(tidyverse)
+library(tidyverse)
+PorDato <- Missing %>% 
+  group_by(DATO) %>% 
+  summarise(INSTANCES = n())
 
 # Remove any row with "NaN" values
 #data[-c(which(data[,3:20]=="NaN", arr.ind=TRUE)[,1]),] -> data
-# Write changes to Excel file "test.xlsx"
-#openxlsx::write.xlsx(data, "test.xlsx", sheetName="Suelos")
 
-rm(data)
-rm(missing)
+rm(Data)
+rm(Missing)
+rm(PorDato)
