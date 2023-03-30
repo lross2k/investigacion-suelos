@@ -12,14 +12,17 @@ Missing <- Data[which(Data=="NAN", arr.ind=TRUE)[,1],1:2]
 Missing$DATO = colnames(Data)[which(Data=="NAN", arr.ind=TRUE)[,2]]
 #write.csv(Missing, "Datos Base/FALTANTES_UNIFICADO_2.csv")
 
-#install.packages(tidyverse)
-library(tidyverse)
+#install.packages(tidyr)
+library(tidyr)
 PorDato <- Missing %>% 
   group_by(DATO) %>% 
   summarise(INSTANCES = n())
 
 # Remove any row with "NaN" values
 #data[-c(which(data[,3:20]=="NaN", arr.ind=TRUE)[,1]),] -> data
+
+# Save modified CSV
+write.csv(Data, "Datos Base/PERIODO_2.csv", row.names = FALSE)
 
 rm(Data)
 rm(Missing)
