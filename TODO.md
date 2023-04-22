@@ -1,0 +1,2 @@
+- Crear función que simplifique la repetitivad de conteo-csv.R
+- Implementar nomenclatura de Google para scripts ya existentes
