@@ -10,4 +10,3 @@ Se usará la style guide de Google para R
 - RStudio IDE en Debian Unstable
 - RStudio IDE en Windows 11
 - RStudio IDE en WIndows 10
-

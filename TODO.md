@@ -1,2 +1,17 @@
-- Crear función que simplifique la repetitivad de conteo-csv.R
-- Implementar nomenclatura de Google para scripts ya existentes
+-[x] Limpiar datos de clima
+-[ ] Analizar condiciones ambientales
+    -[x] Clima
+        -[x] Temperatura
+        -[x] Humedad relativa
+    -[ ] Lluvia
+    -[x] Promedio, maximos y minimos
+        -[x] Diario
+        -[x] Horario
+-[ ] Analizar suelos
+    -[ ] Suelos
+    -[ ] Perm
+    -[ ] Promedio, maximos y minimos
+        -[x] Diario
+        -[ ] Horario
+-[ ] Crear función que simplifique la repetitivad de conteo-csv.R
+-[ ] Implementar nomenclatura de Google para scripts ya existentes

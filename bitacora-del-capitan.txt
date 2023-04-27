@@ -48,16 +48,3 @@ Unificado Periodo 1
 29/09/2020 09:52 a 29/09/2020 11:46
 06/10/2020 08:58 a 06/10/2020 10:41
 26/10/2020 14:07 a 04/11/2020 14:44
-
-condiciones ambientales
-clima temp humedad relativa
-lluvia
-
-de suelos suelos perm
-promedio, maximos y minimos, diario
-
-hacer horario
-
-
-
-
