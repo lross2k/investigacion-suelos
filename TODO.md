@@ -1,18 +1,18 @@
 -[x] Limpiar datos meteorologicos
 -[x] Limpiar datos lluvia
 -[x] Analizar condiciones ambientales
-    -[x] Clima
+    -[x] Meteorologico
         -[x] Temperatura
         -[x] Humedad relativa
     -[x] Lluvia
     -[x] Promedio, maximos y minimos
         -[x] Diario
         -[x] Horario
--[ ] Analizar suelos
-    -[ ] Suelos
-    -[ ] Perm
-    -[ ] Promedio, maximos y minimos
+-[x] Analizar suelos
+    -[x] Temp
+    -[x] Perm
+    -[x] Promedio, maximos y minimos
         -[x] Diario
-        -[ ] Horario
+        -[x] Horario
 -[ ] Crear función que simplifique la repetitivad de conteo-csv.R
 -[ ] Implementar nomenclatura de Google para scripts ya existentes

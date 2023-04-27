@@ -10,4 +10,5 @@ limpiar = function(data, valor) {
 
 read.csv("Datos Base/FORMATTED_DATA.csv", sep = ",") -> Data
 Data <- limpiar(Data, 'NAN')
+Data <- na.omit(Data)
 write.csv(Data, "Datos Base/CLEAN_DATA.csv", row.names = FALSE)

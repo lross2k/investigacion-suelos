@@ -5,9 +5,9 @@ library(dplyr)
 Promedio <- Data %>% group_by(FECHA) %>% 
   summarize(Lluvia = mean(Lluvia))
 Maximo <- Data %>% group_by(FECHA) %>% 
-  summarize(Lluvia = mean(Lluvia))
+  summarize(Lluvia = max(Lluvia))
 Minimo <- Data %>% group_by(FECHA) %>% 
-  summarize(Lluvia = mean(Lluvia))
+  summarize(Lluvia = min(Lluvia))
 
 # Genera CSV con los valores generados
 write.csv(Maximo, "Datos Base/DIARIO_MAX.csv", row.names = FALSE)
