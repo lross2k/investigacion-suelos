@@ -1,5 +1,6 @@
--[x] Limpiar datos de clima
--[ ] Analizar condiciones ambientales
+-[x] Limpiar datos meteorologicos
+-[x] Limpiar datos lluvia
+-[x] Analizar condiciones ambientales
     -[x] Clima
         -[x] Temperatura
         -[x] Humedad relativa
