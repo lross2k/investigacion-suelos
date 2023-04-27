@@ -3,7 +3,7 @@
     -[x] Clima
         -[x] Temperatura
         -[x] Humedad relativa
-    -[ ] Lluvia
+    -[x] Lluvia
     -[x] Promedio, maximos y minimos
         -[x] Diario
         -[x] Horario

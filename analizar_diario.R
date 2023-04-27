@@ -1,5 +1,5 @@
 # Lee datos de CSV
-Data <- read.csv("Datos Base/PERIODO_LIMPIO.csv", sep = ",")
+Data <- read.csv("Datos Base/CLEAN_DATA.csv", sep = ",")
 
 # Separar dataframe por dia
 Data <- Data[,-3]
@@ -40,6 +40,6 @@ Maximo   <- Maximo[-c(1), ]
 Minimo   <- Minimo[-c(1), ]
 
 # Genera CSV con los valores generados
-write.csv(Maximo, "Datos Base/PERIODO_1_MAX.csv", row.names = FALSE)
-write.csv(Minimo, "Datos Base/PERIODO_1_MIN.csv", row.names = FALSE)
-write.csv(Promedio, "Datos Base/PERIODO_1_AVG.csv", row.names = FALSE)
+write.csv(Maximo, "Datos Base/DIARIO_MAX.csv", row.names = FALSE)
+write.csv(Minimo, "Datos Base/DIARIO_MIN.csv", row.names = FALSE)
+write.csv(Promedio, "Datos Base/DIARIO_AVG.csv", row.names = FALSE)

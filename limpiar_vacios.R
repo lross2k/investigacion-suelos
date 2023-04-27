@@ -1,8 +1,13 @@
 # Eliminar cualquier fila con valor
 limpiar = function(data, valor) {
-    return(data[-c(which(data[,]==valor, arr.ind=TRUE)[,1]),])
+    val <- which(data[,]==valor, arr.ind=TRUE)
+    if (length(val) == 0) {
+        return(data)
+    } else {
+        return(data[-c(val[,1]),])
+    }
 }
 
-read.csv("Datos Base/PERIODO_1.csv", sep = ",") -> Data
+read.csv("Datos Base/FORMATTED_DATA.csv", sep = ",") -> Data
 Data <- limpiar(Data, 'NAN')
-write.csv(Data, "Datos Base/PERIODO_LIMPIO.csv", row.names = FALSE)
+write.csv(Data, "Datos Base/CLEAN_DATA.csv", row.names = FALSE)
