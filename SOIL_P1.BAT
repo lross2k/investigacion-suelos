@@ -1,2 +1,0 @@
-Rscript SOIL\soil_analizar_horario_12.R
-Rscript SOIL\soil_analizar_diario_12.R

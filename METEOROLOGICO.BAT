@@ -1,2 +1,0 @@
-Rscript METEOROLOGICO\meteorologico_analizar_diario.R
-Rscript METEOROLOGICO\meteorologico_analizar_horario.R

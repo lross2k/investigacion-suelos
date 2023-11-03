@@ -1,2 +1,0 @@
-Rscript LLUVIA\lluvia_analizar_diario.R
-Rscript LLUVIA\lluvia_analizar_horario.R
